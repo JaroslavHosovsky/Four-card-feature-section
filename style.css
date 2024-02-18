@@ -1,0 +1,136 @@
+/* === COLORS === */
+/* === FONTS === */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  padding: 50px 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 98%);
+}
+
+main {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 24px;
+  color: hsl(229, 6%, 66%);
+  text-align: center;
+  margin-bottom: 15px;
+  max-width: 300px;
+}
+h1 span {
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+}
+
+p {
+  font-weight: 200;
+  font-size: 15px;
+  text-align: center;
+  color: hsl(229, 6%, 66%);
+  margin-bottom: 70px;
+  max-width: 490px;
+}
+
+.card-divider {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-wrapper {
+  padding: 30px 25px;
+  border-radius: 6px;
+  box-shadow: 0px 6px 15px hsla(229, 6%, 66%, 0.4);
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  max-width: 387px;
+}
+.card-wrapper h2 {
+  font-size: 20px;
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 7px;
+}
+.card-wrapper p {
+  text-align: left;
+  margin-bottom: 45px;
+}
+.card-wrapper img {
+  align-self: flex-end;
+  width: 50px;
+  height: auto;
+}
+
+.section-1 {
+  border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+.section-2 {
+  border-top: 5px solid hsl(0, 78%, 62%);
+}
+
+.section-3 {
+  border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+.section-4 {
+  border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+@media only screen and (min-width: 1440px) {
+  .card-divider {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 75%;
+    margin: auto;
+    gap: 25px;
+  }
+  .card-wrapper {
+    max-width: 100%;
+    height: 100%;
+  }
+  .card-wrapper img {
+    width: 65px;
+    margin: 0 25px 0 0;
+  }
+  .section-1 {
+    grid-column: 1/span 1;
+    grid-row: 2/span 2;
+  }
+  .section-2 {
+    grid-column: 2/span 1;
+    grid-row: 1/span 2;
+  }
+  .section-3 {
+    grid-column: 2/span 1;
+    grid-row: 3/span 2;
+  }
+  .section-4 {
+    grid-column: 3/span 1;
+    grid-row: 2/span 2;
+  }
+}/*# sourceMappingURL=style.css.map */

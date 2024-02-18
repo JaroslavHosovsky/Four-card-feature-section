@@ -1,0 +1,112 @@
+@import "partials/mixins";
+@import "partials/variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  padding: 50px 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $neutral_very_light_gray;
+}
+
+main {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  @include heading1;
+
+  span {
+    @include spanHeading;
+  }
+}
+p {
+  @include paragraph;
+  max-width: 490px;
+}
+
+.card-divider {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-wrapper {
+  @include sectionContainer;
+  max-width: 387px;
+}
+
+.section-1 {
+  border-top: 5px solid $primary_cyan;
+}
+
+.section-2 {
+  border-top: 5px solid $primary_red;
+}
+
+.section-3 {
+  border-top: 5px solid $primary_orange;
+}
+
+.section-4 {
+  border-top: 5px solid $primary_blue;
+}
+
+@media only screen and (min-width: 1440px) {
+  .card-divider {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 75%;
+    margin: auto;
+    gap: 25px;
+  }
+
+  .card-wrapper {
+    max-width: 100%;
+    height: 100%;
+
+    img {
+      width: 65px;
+      margin: 0 25px 0 0;
+    }
+  }
+
+  .section-1 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 2;
+  }
+
+  .section-2 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+  }
+
+  .section-3 {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 2;
+  }
+
+  .section-4 {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 2;
+  }
+}
